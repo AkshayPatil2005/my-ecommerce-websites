@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Cart - FashionHub</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="logo">FashionHub</span>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Men.html">Men Cloth</a>
+                <a href="Women.html">Women Cloth</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="cart.html" class="active">Cart</a>
+            </nav>
+            <div style="clear:both"></div>
+        </div>
+    </header>
+
+    <section class="hero" style="background: #f39c12; color: #fff;">
+        <div class="hero-content">
+            <h1>Your Shopping Cart</h1>
+            <p>Review your selected items and proceed to checkout.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Cart Items</h2>
+        <div id="cart-items"></div>
+        <div id="cart-summary" style="margin-top:30px; text-align:right;"></div>
+        <div style="text-align:right; margin-top:20px;">
+            <a href="index.html" class="cta-btn" style="margin-right:10px;">Continue Shopping</a>
+            <button id="checkout-btn" class="cta-btn">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 <span style="font-weight:600;">FashionHub</span>. All rights reserved.
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>

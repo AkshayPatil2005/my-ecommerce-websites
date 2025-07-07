@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FashionHub - Clothing Store</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="logo">FashionHub</span>
+            <nav id="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="Men.html">Men</a>
+                <a href="Women.html">Women</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html" id="login-link">Login</a>
+                <a href="login.html" id="logout-link" style="display:none;">Logout</a>
+            </nav>
+            <div style="clear:both"></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover the Latest Trends</h1>
+            <p>Shop the newest arrivals in fashion for men and women. Style, comfort, and quality—delivered to your door.</p>
+            <a href="products.html" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Classic Denim Jacket">
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Classic Denim Jacket</div>
+                        <div class="product-price">$59.99</div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Summer Floral Dress">
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Summer Floral Dress</div>
+                        <div class="product-price">$39.99</div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Men's Casual Shirt">
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Men's Casual Shirt</div>
+                        <div class="product-price">$29.99</div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20240726/41Hb/66a351b41d763220fa3507ee/-473Wx593H-443040457-offwhite-MODEL.jpg" alt="Women's Hoodie">
+                <div class="product-info">
+                    <div>
+                        <div class="product-title">Women's Hoodie</div>
+                        <div class="product-price">$34.99</div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 <span style="font-weight:600;">FashionHub</span>. All rights reserved.
+    </footer>
+    <script src="js/add-to-cart.js"></script>
+    <script>
+        if (!localStorage.getItem("fashionhub_user")) {
+            window.location.href = "login.html";
+        }
+    </script>
+    <script>
+        // Show/hide login/logout links
+        if (localStorage.getItem("fashionhub_user")) {
+            document.getElementById("login-link").style.display = "none";
+            document.getElementById("logout-link").style.display = "inline";
+        } else {
+            document.getElementById("login-link").style.display = "inline";
+            document.getElementById("logout-link").style.display = "none";
+        }
+
+        // Logout handler
+        document.getElementById("logout-link").onclick = function(e) {
+            e.preventDefault();
+            localStorage.removeItem("fashionhub_user");
+            window.location.href = "login.html";
+        };
+    </script>
+</body>
+</html>
